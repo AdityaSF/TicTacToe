@@ -6,7 +6,7 @@
 
 	<public path="resources" />
 
-	<entry-point class='adiitya.tictactoe.TicTacToeHtml'/>
+	<entry-point class='adiitya.tictactoe.HtmlLauncher'/>
 	<set-configuration-property name="gdx.assetpath" value="assets" />
 	<set-configuration-property name="gdx.assetoutputpath" value="html/target/webapp" />
 </module>

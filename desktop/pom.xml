@@ -15,7 +15,7 @@
 	<name>TicTacToe desktop</name>
 
 	<properties>
-		<mainClass>adiitya.tictactoe.TicTacToeDesktop</mainClass>
+		<mainClass>adiitya.tictactoe.DesktopLauncher</mainClass>
 	</properties>
 
 	<dependencies>
