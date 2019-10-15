@@ -1,0 +1,62 @@
+
+game.png
+size: 128,128
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+board_bg
+  rotate: false
+  xy: 2, 54
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+board_dividers
+  rotate: false
+  xy: 2, 14
+  size: 35, 38
+  orig: 35, 38
+  offset: 0, 0
+  index: -1
+cell_center
+  rotate: false
+  xy: 68, 95
+  size: 9, 10
+  orig: 9, 10
+  offset: 0, 0
+  index: -1
+cell_corner
+  rotate: false
+  xy: 68, 107
+  size: 10, 11
+  orig: 10, 11
+  offset: 0, 0
+  index: -1
+cell_side
+  rotate: false
+  xy: 2, 2
+  size: 10, 10
+  orig: 10, 10
+  offset: 0, 0
+  index: -1
+cell_top
+  rotate: false
+  xy: 39, 41
+  size: 9, 11
+  orig: 9, 11
+  offset: 0, 0
+  index: -1
+symbols_o
+  rotate: false
+  xy: 80, 110
+  size: 7, 8
+  orig: 7, 8
+  offset: 0, 0
+  index: -1
+symbols_x
+  rotate: false
+  xy: 14, 4
+  size: 7, 8
+  orig: 7, 8
+  offset: 0, 0
+  index: -1
