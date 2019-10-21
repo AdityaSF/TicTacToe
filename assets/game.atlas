@@ -1,62 +1,83 @@
 
 game.png
-size: 128,128
+size: 64,64
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
-board_bg
-  rotate: false
-  xy: 2, 54
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: -1
 board_dividers
   rotate: false
-  xy: 2, 14
+  xy: 2, 22
   size: 35, 38
   orig: 35, 38
   offset: 0, 0
   index: -1
 cell_center
   rotate: false
-  xy: 68, 95
+  xy: 39, 38
   size: 9, 10
   orig: 9, 10
   offset: 0, 0
   index: -1
 cell_corner
   rotate: false
-  xy: 68, 107
+  xy: 2, 9
   size: 10, 11
   orig: 10, 11
   offset: 0, 0
   index: -1
 cell_side
   rotate: false
-  xy: 2, 2
+  xy: 39, 50
   size: 10, 10
   orig: 10, 10
   offset: 0, 0
   index: -1
 cell_top
   rotate: false
-  xy: 39, 41
+  xy: 14, 9
   size: 9, 11
   orig: 9, 11
   offset: 0, 0
   index: -1
-symbols_o
+o1
   rotate: false
-  xy: 80, 110
+  xy: 51, 52
   size: 7, 8
   orig: 7, 8
   offset: 0, 0
-  index: -1
-symbols_x
+  index: 0
+o1
   rotate: false
-  xy: 14, 4
+  xy: 25, 12
   size: 7, 8
   orig: 7, 8
   offset: 0, 0
-  index: -1
+  index: 1
+o1
+  rotate: false
+  xy: 39, 28
+  size: 7, 8
+  orig: 7, 8
+  offset: 0, 0
+  index: 2
+x1
+  rotate: false
+  xy: 34, 12
+  size: 7, 8
+  orig: 7, 8
+  offset: 0, 0
+  index: 0
+x1
+  rotate: false
+  xy: 25, 2
+  size: 7, 8
+  orig: 7, 8
+  offset: 0, 0
+  index: 1
+x1
+  rotate: false
+  xy: 34, 2
+  size: 7, 8
+  orig: 7, 8
+  offset: 0, 0
+  index: 2
