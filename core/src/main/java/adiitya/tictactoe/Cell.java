@@ -1,16 +1,13 @@
 package adiitya.tictactoe;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.utils.Array;
+
+import java.util.Optional;
 
 public class Cell {
-
-	private static Array<TextureRegion> textures = new Array<>();
-
-	private TicTacToe ttt;
 
 	private boolean clicked = false;
 
@@ -20,9 +17,8 @@ public class Cell {
 
 	private PlayerObject player = null;
 
-	public Cell(TicTacToe ttt, float x, float y, CellType type) {
+	public Cell(float x, float y, CellType type) {
 
-		this.ttt = ttt;
 		this.x = x;
 		this.y = y;
 		this.type = type;
@@ -35,7 +31,7 @@ public class Cell {
 
 	public void render(SpriteBatch batch, float x, float y, CellType type) {
 
-		TextureRegion texture = textures.get(type.ordinal());
+		AtlasRegion texture = Resources.getTexture(type.textureName);
 		batch.draw(texture, x, y, texture.getRegionWidth() * TicTacToe.SCALE, texture.getRegionHeight() * TicTacToe.SCALE);
 		renderPlayer(batch);
 	}
@@ -45,7 +41,7 @@ public class Cell {
 		if (player == null)
 			return;
 
-		TextureRegion cell = textures.get(type.ordinal());
+		AtlasRegion cell = Resources.getTexture(type.textureName);
 		Vector2 playerOff = new Vector2(TicTacToe.SCALE * (cell.getRegionWidth() - player.getTextureWidth()) / 2F, TicTacToe.SCALE * (cell.getRegionHeight() - player.getTextureHeight()) / 2F);
 
 		player.render(batch, x + playerOff.x, y + playerOff.y);
@@ -53,18 +49,24 @@ public class Cell {
 
 	public boolean onClick(int x, int y, PlayerType playerType) {
 
-		TextureRegion texture = textures.get(type.ordinal());
+		AtlasRegion texture = Resources.getTexture(type.textureName);
 		Rectangle bounds = new Rectangle(this.x, this.y, texture.getRegionWidth() * TicTacToe.SCALE, texture.getRegionHeight() * TicTacToe.SCALE);
 
 		if (bounds.contains(x, y) && !clicked) {
 
-			player = PlayerObject.fromPlayerType(ttt, playerType);
+			player = PlayerObject.fromPlayerType(playerType);
 			clicked = true;
 
 			return true;
 		}
 
 		return false;
+	}
+
+	public PlayerType getOccupation() {
+		return Optional.ofNullable(player)
+				.map(PlayerObject::getType)
+				.orElse(PlayerType.NONE);
 	}
 
 	public enum CellType {
@@ -80,11 +82,5 @@ public class Cell {
 
 			this.textureName = textureName;
 		}
-	}
-
-	public static void initialize(TicTacToe ttt) {
-
-		for (CellType type : CellType.values())
-			textures.add(ttt.atlas.findRegion(type.textureName));
 	}
 }

@@ -5,7 +5,6 @@ import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
 import com.badlogic.gdx.math.MathUtils;
-import com.badlogic.gdx.utils.Array;
 
 public class PlayerObject {
 
@@ -29,6 +28,10 @@ public class PlayerObject {
 		RenderUtils.renderAnimation(batch, animation, elapsed, x, y, false);
 	}
 
+	public PlayerType getType() {
+		return type;
+	}
+
 	public float getTextureWidth() {
 		return animation.getKeyFrame(0F).getRegionWidth();
 	}
@@ -37,13 +40,11 @@ public class PlayerObject {
 		return animation.getKeyFrame(0F).getRegionHeight();
 	}
 
-	public static PlayerObject fromPlayerType(TicTacToe ttt, PlayerType type) {
+	public static PlayerObject fromPlayerType(PlayerType type) {
 
 		if (type == PlayerType.NONE)
 			return null;
 
-		Array<AtlasRegion> frames = ttt.atlas.findRegions(type.animationName);
-
-		return new PlayerObject(new Animation<>(0.05F, frames), type);
+		return new PlayerObject(new Animation<>(0.05F, Resources.getAnimation(type.animationName)), type);
 	}
 }

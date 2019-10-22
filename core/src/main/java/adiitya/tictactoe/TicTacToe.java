@@ -5,14 +5,12 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 
 import static com.badlogic.gdx.graphics.GL20.*;
 
 public class TicTacToe extends Game {
 
 	public OrthographicCamera cam;
-	public TextureAtlas atlas;
 	public SpriteBatch batch;
 
 	public static final float SCALE = 500F / 64F;
@@ -21,7 +19,6 @@ public class TicTacToe extends Game {
 	public void create () {
 
 		cam = new OrthographicCamera();
-		atlas = new TextureAtlas(Gdx.files.internal("game.atlas"), true);
 		batch = new SpriteBatch();
 
 		setScreen(new PlayScreen(this));
@@ -60,7 +57,7 @@ public class TicTacToe extends Game {
 
 	@Override
 	public void dispose () {
-		atlas.dispose();
+		Resources.getAtlas().dispose();
 		batch.dispose();
 	}
 }

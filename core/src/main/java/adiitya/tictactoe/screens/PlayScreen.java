@@ -3,6 +3,7 @@ package adiitya.tictactoe.screens;
 import adiitya.tictactoe.Cell;
 import adiitya.tictactoe.Cell.CellType;
 import adiitya.tictactoe.PlayerType;
+import adiitya.tictactoe.Resources;
 import adiitya.tictactoe.TicTacToe;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
@@ -26,18 +27,18 @@ public class PlayScreen implements Screen, InputProcessor {
 	@Override
 	public void show() {
 
-		dividers = ttt.atlas.findRegion("board_dividers");
+		dividers = Resources.getTexture("board_dividers");
 
 		cells = new Array<>();
-		cells.add(new Cell(ttt, 117, 109, CellType.CORNER));
-		cells.add(new Cell(ttt, 211, 109, CellType.TOP));
-		cells.add(new Cell(ttt, 297, 109, CellType.CORNER));
-		cells.add(new Cell(ttt, 117, 211, CellType.SIDE));
-		cells.add(new Cell(ttt, 211, 211, CellType.CENTER));
-		cells.add(new Cell(ttt, 297, 211, CellType.SIDE));
-		cells.add(new Cell(ttt, 117, 305, CellType.CORNER));
-		cells.add(new Cell(ttt, 211, 305, CellType.TOP));
-		cells.add(new Cell(ttt, 297, 305, CellType.CORNER));
+		cells.add(new Cell(117, 109, CellType.CORNER));
+		cells.add(new Cell(211, 109, CellType.TOP));
+		cells.add(new Cell(297, 109, CellType.CORNER));
+		cells.add(new Cell(117, 211, CellType.SIDE));
+		cells.add(new Cell(211, 211, CellType.CENTER));
+		cells.add(new Cell(297, 211, CellType.SIDE));
+		cells.add(new Cell(117, 305, CellType.CORNER));
+		cells.add(new Cell(211, 305, CellType.TOP));
+		cells.add(new Cell(297, 305, CellType.CORNER));
 
 		playerType = PlayerType.X;
 
