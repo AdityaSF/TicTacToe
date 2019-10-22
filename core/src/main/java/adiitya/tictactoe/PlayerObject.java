@@ -39,6 +39,9 @@ public class PlayerObject {
 
 	public static PlayerObject fromPlayerType(TicTacToe ttt, PlayerType type) {
 
+		if (type == PlayerType.NONE)
+			return null;
+
 		Array<AtlasRegion> frames = ttt.atlas.findRegions(type.animationName);
 
 		return new PlayerObject(new Animation<>(0.05F, frames), type);

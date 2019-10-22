@@ -3,7 +3,8 @@ package adiitya.tictactoe;
 public enum PlayerType {
 
 	X("x1"),
-	O("o1");
+	O("o1"),
+	NONE("");
 
 	String animationName;
 
