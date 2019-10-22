@@ -1,5 +1,6 @@
 package adiitya.tictactoe;
 
+import adiitya.tictactoe.screens.PlayScreen;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;

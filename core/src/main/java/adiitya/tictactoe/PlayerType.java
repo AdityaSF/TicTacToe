@@ -2,14 +2,13 @@ package adiitya.tictactoe;
 
 public enum PlayerType {
 
-	X("player_x", "x1"),
-	O("player_o", "o1");
+	X("x1"),
+	O("o1");
 
-	public String textureName;
-	public String animationName;
+	String animationName;
 
-	PlayerType(String textureName, String animationName) {
-		this.textureName = textureName;
+	PlayerType(String animationName) {
+
 		this.animationName = animationName;
 	}
 

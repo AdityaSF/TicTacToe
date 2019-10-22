@@ -1,8 +1,6 @@
 package adiitya.tictactoe;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
@@ -10,8 +8,9 @@ import com.badlogic.gdx.utils.Array;
 
 public class Cell {
 
-	private static final float SCALE = 500F / 64F;
 	private static Array<TextureRegion> textures = new Array<>();
+
+	private TicTacToe ttt;
 
 	private boolean clicked = false;
 
@@ -21,8 +20,9 @@ public class Cell {
 
 	private PlayerObject player = null;
 
-	public Cell(float x, float y, CellType type) {
+	public Cell(TicTacToe ttt, float x, float y, CellType type) {
 
+		this.ttt = ttt;
 		this.x = x;
 		this.y = y;
 		this.type = type;
@@ -36,7 +36,7 @@ public class Cell {
 	public void render(SpriteBatch batch, float x, float y, CellType type) {
 
 		TextureRegion texture = textures.get(type.ordinal());
-		batch.draw(texture, x, y, texture.getRegionWidth() * SCALE, texture.getRegionHeight() * SCALE);
+		batch.draw(texture, x, y, texture.getRegionWidth() * TicTacToe.SCALE, texture.getRegionHeight() * TicTacToe.SCALE);
 		renderPlayer(batch);
 	}
 
@@ -46,20 +46,19 @@ public class Cell {
 			return;
 
 		TextureRegion cell = textures.get(type.ordinal());
-		Vector2 playerOff = new Vector2(SCALE * (cell.getRegionWidth() - player.getTextureWidth()) / 2F, SCALE * (cell.getRegionHeight() - player.getTextureHeight()) / 2F);
+		Vector2 playerOff = new Vector2(TicTacToe.SCALE * (cell.getRegionWidth() - player.getTextureWidth()) / 2F, TicTacToe.SCALE * (cell.getRegionHeight() - player.getTextureHeight()) / 2F);
 
 		player.render(batch, x + playerOff.x, y + playerOff.y);
-		//batch.draw(player, x + playerOff.x, y + playerOff.y, player.getTextureWidth() * SCALE, player.getTextureHeight() * SCALE);
 	}
 
 	public boolean onClick(int x, int y, PlayerType playerType) {
 
 		TextureRegion texture = textures.get(type.ordinal());
-		Rectangle bounds = new Rectangle(this.x, this.y, texture.getRegionWidth() * SCALE, texture.getRegionHeight() * SCALE);
+		Rectangle bounds = new Rectangle(this.x, this.y, texture.getRegionWidth() * TicTacToe.SCALE, texture.getRegionHeight() * TicTacToe.SCALE);
 
 		if (bounds.contains(x, y) && !clicked) {
 
-			player = PlayerObject.fromPlayerType(playerType);
+			player = PlayerObject.fromPlayerType(ttt, playerType);
 			clicked = true;
 
 			return true;
@@ -83,11 +82,9 @@ public class Cell {
 		}
 	}
 
-	static {
-
-		TextureAtlas atlas = new TextureAtlas(Gdx.files.internal("game.atlas"), true);
+	public static void initialize(TicTacToe ttt) {
 
 		for (CellType type : CellType.values())
-			textures.add(atlas.findRegion(type.textureName));
+			textures.add(ttt.atlas.findRegion(type.textureName));
 	}
 }
