@@ -1,10 +1,11 @@
 package adiitya.tictactoe.screens;
 
+import adiitya.tictactoe.TicTacToe;
 import adiitya.tictactoe.Cell;
 import adiitya.tictactoe.Cell.CellType;
 import adiitya.tictactoe.PlayerType;
 import adiitya.tictactoe.Resources;
-import adiitya.tictactoe.TicTacToe;
+import adiitya.tictactoe.score.ScoreManager;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.Screen;
@@ -19,6 +20,9 @@ public class PlayScreen implements Screen, InputProcessor {
 	private Array<Cell> cells;
 
 	private PlayerType playerType;
+	private ScoreManager manager;
+
+	private boolean win;
 
 	public PlayScreen(TicTacToe ttt) {
 		this.ttt = ttt;
@@ -41,6 +45,9 @@ public class PlayScreen implements Screen, InputProcessor {
 		cells.add(new Cell(297, 305, CellType.CORNER));
 
 		playerType = PlayerType.X;
+		manager = new ScoreManager();
+
+		win = false;
 
 		Gdx.input.setInputProcessor(this);
 	}
@@ -102,10 +109,27 @@ public class PlayScreen implements Screen, InputProcessor {
 	@Override
 	public boolean touchUp(int screenX, int screenY, int pointer, int button) {
 
-		for (Cell cell : cells) {
+		if (win)
+			return false;
 
-			if (cell.onClick(screenX, screenY, playerType))
+		for (int i = 0; i < cells.size; i++) {
+
+			Cell cell = cells.get(i);
+
+			if (cell.onClick(screenX, screenY, playerType)) {
+
+				manager.score(i, playerType);
 				playerType = PlayerType.flip(playerType);
+
+				PlayerType winner = manager.checkWinner();
+
+				if (!winner.equals(PlayerType.NONE)) {
+					Gdx.app.log("WINNER", winner.name() + " has won!");
+					win = true;
+				}
+
+				return true;
+			}
 		}
 
 		return false;
