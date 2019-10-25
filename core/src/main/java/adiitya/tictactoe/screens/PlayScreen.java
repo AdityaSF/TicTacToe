@@ -11,6 +11,8 @@ import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.utils.Array;
+import com.badlogic.gdx.utils.IntArray;
+import com.badlogic.gdx.utils.Timer;
 
 public class PlayScreen implements Screen, InputProcessor {
 
@@ -59,6 +61,16 @@ public class PlayScreen implements Screen, InputProcessor {
 
 		ttt.batch.draw(dividers, 14F * scale, 13F * scale, 35F * scale, 38F * scale);
 		cells.forEach(c -> c.render(ttt.batch));
+	}
+
+	private void handleWin() {
+
+		IntArray winningCells = manager.getWinningIndices();
+
+		for (int i = 0; i < 3; i++)
+			Timer.schedule(new WinTask(winningCells, i, cells), 0.1F * i);
+
+		win = true;
 	}
 
 	@Override
@@ -123,10 +135,8 @@ public class PlayScreen implements Screen, InputProcessor {
 
 				PlayerType winner = manager.checkWinner();
 
-				if (!winner.equals(PlayerType.NONE)) {
-					Gdx.app.log("WINNER", winner.name() + " has won!");
-					win = true;
-				}
+				if (!winner.equals(PlayerType.NONE))
+					handleWin();
 
 				return true;
 			}

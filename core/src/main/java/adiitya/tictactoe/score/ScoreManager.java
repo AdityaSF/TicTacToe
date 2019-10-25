@@ -2,6 +2,7 @@ package adiitya.tictactoe.score;
 
 import adiitya.tictactoe.PlayerType;
 import com.badlogic.gdx.utils.Array;
+import com.badlogic.gdx.utils.IntArray;
 
 import java.util.stream.StreamSupport;
 
@@ -30,5 +31,13 @@ public class ScoreManager {
                 .filter(type -> !type.equals(PlayerType.NONE))
                 .findFirst()
                 .orElse(PlayerType.NONE);
+    }
+
+    public IntArray getWinningIndices() {
+        return StreamSupport.stream(combos.spliterator(), false)
+                .filter(WinCombo::hasWinner)
+                .map(WinCombo::getIndices)
+                .findFirst()
+                .orElse(new IntArray());
     }
 }
