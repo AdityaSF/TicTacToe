@@ -1,45 +1,63 @@
 package adiitya.tictactoe;
 
-import com.badlogic.gdx.graphics.GL30;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.ApplicationListener;
+import adiitya.tictactoe.screens.PlayScreen;
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-public class TicTacToe implements ApplicationListener {
-	Texture texture;
-	SpriteBatch batch;
-	float elapsed;
+import static com.badlogic.gdx.graphics.GL20.*;
+
+public class TicTacToe extends Game {
+
+	public OrthographicCamera cam;
+	public SpriteBatch batch;
+
+	public static final float SCALE = 500F / 64F;
 
 	@Override
 	public void create () {
-		texture = new Texture(Gdx.files.internal("libgdx-logo.png"));
+
+		cam = new OrthographicCamera();
 		batch = new SpriteBatch();
+
+		setScreen(new PlayScreen(this));
 	}
 
 	@Override
 	public void resize (int width, int height) {
+
+		cam.setToOrtho(true, width, height);
+		cam.update();
+		cam.position.set(250, 250, 0);
+
+		batch.setProjectionMatrix(cam.combined);
 	}
 
 	@Override
 	public void render () {
-		elapsed += Gdx.graphics.getDeltaTime();
-		Gdx.gl.glClearColor(0, 0, 0, 0);
-		Gdx.gl.glClear(GL30.GL_COLOR_BUFFER_BIT);
+
+		Gdx.gl.glClearColor(0.149F, 0.169F, 0.267F, 0);
+		Gdx.gl.glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
 		batch.begin();
-		batch.draw(texture, 100+100*(float)Math.cos(elapsed), 100+25*(float)Math.sin(elapsed));
+		getScreen().render(Gdx.graphics.getDeltaTime());
 		batch.end();
 	}
 
 	@Override
-	public void pause () {
+	public void pause() {
+		//unused
 	}
 
 	@Override
-	public void resume () {
+	public void resume() {
+		//unused
 	}
 
 	@Override
 	public void dispose () {
+		Resources.getAtlas().dispose();
+		batch.dispose();
 	}
 }

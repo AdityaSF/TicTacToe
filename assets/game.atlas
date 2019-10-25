@@ -1,0 +1,832 @@
+
+game.png
+size: 512,64
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+BL
+  rotate: false
+  xy: 2, 2
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: -1
+BR
+  rotate: false
+  xy: 2, 2
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: -1
+TL
+  rotate: false
+  xy: 2, 2
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: -1
+TR
+  rotate: false
+  xy: 2, 2
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: -1
+BLClickO
+  rotate: false
+  xy: 39, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+BLClickO
+  rotate: false
+  xy: 14, 2
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+BLClickO
+  rotate: false
+  xy: 39, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+BLWinO
+  rotate: false
+  xy: 39, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+BLClickX
+  rotate: false
+  xy: 51, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+BLClickX
+  rotate: false
+  xy: 26, 2
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+BLClickX
+  rotate: false
+  xy: 51, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+BLWinX
+  rotate: false
+  xy: 51, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+BLWinO
+  rotate: false
+  xy: 63, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+BLWinO
+  rotate: false
+  xy: 63, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+BLWinX
+  rotate: false
+  xy: 75, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+BLWinX
+  rotate: false
+  xy: 75, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+BRClickO
+  rotate: false
+  xy: 87, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+BRClickO
+  rotate: false
+  xy: 87, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+BRClickO
+  rotate: false
+  xy: 99, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+BRWinO
+  rotate: false
+  xy: 99, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+BRClickX
+  rotate: false
+  xy: 99, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+BRClickX
+  rotate: false
+  xy: 111, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+BRClickX
+  rotate: false
+  xy: 111, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+BRWinX
+  rotate: false
+  xy: 111, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+BRWinO
+  rotate: false
+  xy: 123, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+BRWinO
+  rotate: false
+  xy: 123, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+BRWinX
+  rotate: false
+  xy: 135, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+BRWinX
+  rotate: false
+  xy: 135, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+C
+  rotate: false
+  xy: 387, 27
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: -1
+CB
+  rotate: false
+  xy: 399, 42
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: -1
+CT
+  rotate: false
+  xy: 399, 42
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: -1
+CBClickO
+  rotate: false
+  xy: 398, 27
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 0
+CBClickO
+  rotate: false
+  xy: 410, 42
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 1
+CBClickO
+  rotate: false
+  xy: 409, 27
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 2
+CBClickX
+  rotate: false
+  xy: 421, 42
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 0
+CBClickX
+  rotate: false
+  xy: 420, 27
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 1
+CBClickX
+  rotate: false
+  xy: 432, 42
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 2
+CBWinO
+  rotate: false
+  xy: 431, 27
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 0
+CTClickO
+  rotate: false
+  xy: 431, 27
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 2
+CTWinO
+  rotate: false
+  xy: 431, 27
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 0
+CBWinO
+  rotate: false
+  xy: 443, 42
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 1
+CTWinO
+  rotate: false
+  xy: 443, 42
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 1
+CWinO
+  rotate: false
+  xy: 443, 42
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 1
+CBWinO
+  rotate: false
+  xy: 442, 27
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 2
+CTWinO
+  rotate: false
+  xy: 442, 27
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 2
+CWinO
+  rotate: false
+  xy: 442, 27
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 2
+CBWinX
+  rotate: false
+  xy: 454, 42
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 0
+CTClickX
+  rotate: false
+  xy: 454, 42
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 2
+CTWinX
+  rotate: false
+  xy: 454, 42
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 0
+CBWinX
+  rotate: false
+  xy: 453, 27
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 1
+CTWinX
+  rotate: false
+  xy: 453, 27
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 1
+CWinX
+  rotate: false
+  xy: 453, 27
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 1
+CBWinX
+  rotate: false
+  xy: 465, 42
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 2
+CTWinX
+  rotate: false
+  xy: 465, 42
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 2
+CWinX
+  rotate: false
+  xy: 465, 42
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 2
+CClickO
+  rotate: false
+  xy: 464, 27
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 0
+CClickO
+  rotate: false
+  xy: 476, 42
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 1
+CClickO
+  rotate: false
+  xy: 475, 27
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 2
+CWinO
+  rotate: false
+  xy: 475, 27
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 0
+CClickX
+  rotate: false
+  xy: 487, 42
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 0
+CClickX
+  rotate: false
+  xy: 486, 27
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 1
+CClickX
+  rotate: false
+  xy: 498, 42
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 2
+CWinX
+  rotate: false
+  xy: 498, 42
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 0
+CL
+  rotate: false
+  xy: 147, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: -1
+CR
+  rotate: false
+  xy: 147, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: -1
+CLClickO
+  rotate: false
+  xy: 147, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+CLClickO
+  rotate: false
+  xy: 159, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+CLClickO
+  rotate: false
+  xy: 159, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+CLWinO
+  rotate: false
+  xy: 159, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+CLClickX
+  rotate: false
+  xy: 171, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+CLClickX
+  rotate: false
+  xy: 171, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+CLClickX
+  rotate: false
+  xy: 183, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+CLWinX
+  rotate: false
+  xy: 183, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+CLWinO
+  rotate: false
+  xy: 183, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+CLWinO
+  rotate: false
+  xy: 195, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+CLWinX
+  rotate: false
+  xy: 195, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+CLWinX
+  rotate: false
+  xy: 207, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+CRClickO
+  rotate: false
+  xy: 207, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+CRClickO
+  rotate: false
+  xy: 219, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+CRClickO
+  rotate: false
+  xy: 219, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+CRWinO
+  rotate: false
+  xy: 219, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+CRClickX
+  rotate: false
+  xy: 231, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+CRClickX
+  rotate: false
+  xy: 231, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+CRClickX
+  rotate: false
+  xy: 243, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+CRWinX
+  rotate: false
+  xy: 243, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+CRWinO
+  rotate: false
+  xy: 243, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+CRWinO
+  rotate: false
+  xy: 255, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+CRWinX
+  rotate: false
+  xy: 255, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+CRWinX
+  rotate: false
+  xy: 267, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+CTClickO
+  rotate: false
+  xy: 497, 27
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 0
+CTClickO
+  rotate: false
+  xy: 39, 12
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 1
+CTClickX
+  rotate: false
+  xy: 50, 12
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 0
+CTClickX
+  rotate: false
+  xy: 61, 12
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 1
+Dividers
+  rotate: false
+  xy: 2, 17
+  size: 35, 38
+  orig: 35, 38
+  offset: 0, 0
+  index: -1
+TLClickO
+  rotate: false
+  xy: 267, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+TLClickO
+  rotate: false
+  xy: 279, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+TLClickO
+  rotate: false
+  xy: 279, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+TLWinO
+  rotate: false
+  xy: 279, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+TLClickX
+  rotate: false
+  xy: 291, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+TLClickX
+  rotate: false
+  xy: 291, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+TLClickX
+  rotate: false
+  xy: 303, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+TLWinX
+  rotate: false
+  xy: 303, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+TLWinO
+  rotate: false
+  xy: 303, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+TLWinO
+  rotate: false
+  xy: 315, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+TLWinX
+  rotate: false
+  xy: 315, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+TLWinX
+  rotate: false
+  xy: 327, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+TRClickO
+  rotate: false
+  xy: 327, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+TRClickO
+  rotate: false
+  xy: 339, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+TRClickO
+  rotate: false
+  xy: 339, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+TRWinO
+  rotate: false
+  xy: 339, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+TRClickX
+  rotate: false
+  xy: 351, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+TRClickX
+  rotate: false
+  xy: 351, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+TRClickX
+  rotate: false
+  xy: 363, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+TRWinX
+  rotate: false
+  xy: 363, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+TRWinO
+  rotate: false
+  xy: 363, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+TRWinO
+  rotate: false
+  xy: 375, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+TRWinX
+  rotate: false
+  xy: 375, 27
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+TRWinX
+  rotate: false
+  xy: 387, 42
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
