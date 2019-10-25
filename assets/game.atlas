@@ -263,21 +263,56 @@ CBClickX
   orig: 9, 13
   offset: 0, 0
   index: 2
-CClickO
+CBWinO
   rotate: false
   xy: 431, 27
   size: 9, 13
   orig: 9, 13
   offset: 0, 0
   index: 0
-CClickO
+CTClickO
+  rotate: false
+  xy: 431, 27
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 2
+CTWinO
+  rotate: false
+  xy: 431, 27
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 0
+CBWinO
   rotate: false
   xy: 443, 42
   size: 9, 13
   orig: 9, 13
   offset: 0, 0
   index: 1
-CClickO
+CTWinO
+  rotate: false
+  xy: 443, 42
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 1
+CWinO
+  rotate: false
+  xy: 443, 42
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 1
+CBWinO
+  rotate: false
+  xy: 442, 27
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 2
+CTWinO
   rotate: false
   xy: 442, 27
   size: 9, 13
@@ -290,22 +325,57 @@ CWinO
   size: 9, 13
   orig: 9, 13
   offset: 0, 0
-  index: 0
-CClickX
+  index: 2
+CBWinX
   rotate: false
   xy: 454, 42
   size: 9, 13
   orig: 9, 13
   offset: 0, 0
   index: 0
-CClickX
+CTClickX
+  rotate: false
+  xy: 454, 42
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 2
+CTWinX
+  rotate: false
+  xy: 454, 42
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 0
+CBWinX
   rotate: false
   xy: 453, 27
   size: 9, 13
   orig: 9, 13
   offset: 0, 0
   index: 1
-CClickX
+CTWinX
+  rotate: false
+  xy: 453, 27
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 1
+CWinX
+  rotate: false
+  xy: 453, 27
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 1
+CBWinX
+  rotate: false
+  xy: 465, 42
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 2
+CTWinX
   rotate: false
   xy: 465, 42
   size: 9, 13
@@ -315,6 +385,62 @@ CClickX
 CWinX
   rotate: false
   xy: 465, 42
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 2
+CClickO
+  rotate: false
+  xy: 464, 27
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 0
+CClickO
+  rotate: false
+  xy: 476, 42
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 1
+CClickO
+  rotate: false
+  xy: 475, 27
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 2
+CWinO
+  rotate: false
+  xy: 475, 27
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 0
+CClickX
+  rotate: false
+  xy: 487, 42
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 0
+CClickX
+  rotate: false
+  xy: 486, 27
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 1
+CClickX
+  rotate: false
+  xy: 498, 42
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 2
+CWinX
+  rotate: false
+  xy: 498, 42
   size: 9, 13
   orig: 9, 13
   offset: 0, 0
@@ -503,74 +629,32 @@ CRWinX
   index: 2
 CTClickO
   rotate: false
-  xy: 464, 27
-  size: 9, 13
-  orig: 9, 13
-  offset: 0, 0
-  index: 0
-CTClickO
-  rotate: false
-  xy: 476, 42
-  size: 9, 13
-  orig: 9, 13
-  offset: 0, 0
-  index: 1
-CTClickO
-  rotate: false
-  xy: 475, 27
-  size: 9, 13
-  orig: 9, 13
-  offset: 0, 0
-  index: 2
-CTClickX
-  rotate: false
-  xy: 487, 42
-  size: 9, 13
-  orig: 9, 13
-  offset: 0, 0
-  index: 0
-CTClickX
-  rotate: false
-  xy: 486, 27
-  size: 9, 13
-  orig: 9, 13
-  offset: 0, 0
-  index: 1
-CTClickX
-  rotate: false
-  xy: 498, 42
-  size: 9, 13
-  orig: 9, 13
-  offset: 0, 0
-  index: 2
-CWinO
-  rotate: false
   xy: 497, 27
   size: 9, 13
   orig: 9, 13
   offset: 0, 0
-  index: 1
-CWinO
+  index: 0
+CTClickO
   rotate: false
   xy: 39, 12
   size: 9, 13
   orig: 9, 13
   offset: 0, 0
-  index: 2
-CWinX
+  index: 1
+CTClickX
   rotate: false
   xy: 50, 12
   size: 9, 13
   orig: 9, 13
   offset: 0, 0
-  index: 1
-CWinX
+  index: 0
+CTClickX
   rotate: false
   xy: 61, 12
   size: 9, 13
   orig: 9, 13
   offset: 0, 0
-  index: 2
+  index: 1
 Dividers
   rotate: false
   xy: 2, 17
