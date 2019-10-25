@@ -1,82 +1,537 @@
 
 game.png
-size: 64,64
+size: 256,64
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
-board_dividers
+BL
   rotate: false
-  xy: 2, 22
+  xy: 2, 6
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: -1
+BR
+  rotate: false
+  xy: 2, 6
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: -1
+TL
+  rotate: false
+  xy: 2, 6
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: -1
+TR
+  rotate: false
+  xy: 2, 6
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: -1
+BLClickO
+  rotate: false
+  xy: 39, 46
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+BLClickO
+  rotate: false
+  xy: 14, 6
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+BLClickO
+  rotate: false
+  xy: 39, 31
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+BLClickX
+  rotate: false
+  xy: 51, 46
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+BLClickX
+  rotate: false
+  xy: 26, 6
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+BLClickX
+  rotate: false
+  xy: 51, 31
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+BRClickO
+  rotate: false
+  xy: 63, 46
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+BRClickO
+  rotate: false
+  xy: 63, 31
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+BRClickO
+  rotate: false
+  xy: 75, 46
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+BRClickX
+  rotate: false
+  xy: 75, 31
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+BRClickX
+  rotate: false
+  xy: 87, 46
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+BRClickX
+  rotate: false
+  xy: 87, 31
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+C
+  rotate: false
+  xy: 243, 31
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: -1
+CB
+  rotate: false
+  xy: 39, 16
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: -1
+CT
+  rotate: false
+  xy: 39, 16
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: -1
+CBClickO
+  rotate: false
+  xy: 50, 16
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 0
+CBClickO
+  rotate: false
+  xy: 61, 16
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 1
+CBClickO
+  rotate: false
+  xy: 72, 16
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 2
+CBClickX
+  rotate: false
+  xy: 83, 16
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 0
+CBClickX
+  rotate: false
+  xy: 94, 16
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 1
+CBClickX
+  rotate: false
+  xy: 105, 16
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 2
+CClickO
+  rotate: false
+  xy: 116, 16
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 0
+CClickO
+  rotate: false
+  xy: 127, 16
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 1
+CClickO
+  rotate: false
+  xy: 138, 16
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 2
+CClickX
+  rotate: false
+  xy: 149, 16
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 0
+CClickX
+  rotate: false
+  xy: 160, 16
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 1
+CClickX
+  rotate: false
+  xy: 171, 16
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 2
+CL
+  rotate: false
+  xy: 99, 46
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: -1
+CR
+  rotate: false
+  xy: 99, 46
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: -1
+CLClickO
+  rotate: false
+  xy: 99, 31
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+CLClickO
+  rotate: false
+  xy: 111, 46
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+CLClickO
+  rotate: false
+  xy: 111, 31
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+CLClickX
+  rotate: false
+  xy: 123, 46
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+CLClickX
+  rotate: false
+  xy: 123, 31
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+CLClickX
+  rotate: false
+  xy: 135, 46
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+CRClickO
+  rotate: false
+  xy: 135, 31
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+CRClickO
+  rotate: false
+  xy: 147, 46
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+CRClickO
+  rotate: false
+  xy: 147, 31
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+CRClickX
+  rotate: false
+  xy: 159, 46
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+CRClickX
+  rotate: false
+  xy: 159, 31
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+CRClickX
+  rotate: false
+  xy: 171, 46
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+CTClickO
+  rotate: false
+  xy: 182, 16
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 0
+CTClickO
+  rotate: false
+  xy: 193, 16
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 1
+CTClickO
+  rotate: false
+  xy: 204, 16
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 2
+CTClickX
+  rotate: false
+  xy: 215, 16
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 0
+CTClickX
+  rotate: false
+  xy: 226, 16
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 1
+CTClickX
+  rotate: false
+  xy: 237, 16
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: 2
+CenterWinO
+  rotate: false
+  xy: 38, 2
+  size: 9, 12
+  orig: 9, 12
+  offset: 0, 0
+  index: 0
+CenterWinO
+  rotate: false
+  xy: 49, 2
+  size: 9, 12
+  orig: 9, 12
+  offset: 0, 0
+  index: 1
+CenterWinO
+  rotate: false
+  xy: 60, 2
+  size: 9, 12
+  orig: 9, 12
+  offset: 0, 0
+  index: 2
+CenterWinX
+  rotate: false
+  xy: 71, 2
+  size: 9, 12
+  orig: 9, 12
+  offset: 0, 0
+  index: 0
+CenterWinX
+  rotate: false
+  xy: 82, 2
+  size: 9, 12
+  orig: 9, 12
+  offset: 0, 0
+  index: 1
+CenterWinX
+  rotate: false
+  xy: 93, 2
+  size: 9, 12
+  orig: 9, 12
+  offset: 0, 0
+  index: 2
+Dividers
+  rotate: false
+  xy: 2, 21
   size: 35, 38
   orig: 35, 38
   offset: 0, 0
   index: -1
-cell_center
+TLClickO
   rotate: false
-  xy: 39, 38
-  size: 9, 10
-  orig: 9, 10
+  xy: 171, 31
+  size: 10, 13
+  orig: 10, 13
   offset: 0, 0
-  index: -1
-cell_corner
+  index: 0
+TLClickO
   rotate: false
-  xy: 2, 9
-  size: 10, 11
-  orig: 10, 11
+  xy: 183, 46
+  size: 10, 13
+  orig: 10, 13
   offset: 0, 0
-  index: -1
-cell_side
+  index: 1
+TLClickO
   rotate: false
-  xy: 39, 50
-  size: 10, 10
-  orig: 10, 10
+  xy: 183, 31
+  size: 10, 13
+  orig: 10, 13
   offset: 0, 0
-  index: -1
-cell_top
+  index: 2
+TLClickX
   rotate: false
-  xy: 14, 9
-  size: 9, 11
-  orig: 9, 11
+  xy: 195, 46
+  size: 10, 13
+  orig: 10, 13
   offset: 0, 0
-  index: -1
+  index: 0
+TLClickX
+  rotate: false
+  xy: 195, 31
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+TLClickX
+  rotate: false
+  xy: 207, 46
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+TRClickO
+  rotate: false
+  xy: 207, 31
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+TRClickO
+  rotate: false
+  xy: 219, 46
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+TRClickO
+  rotate: false
+  xy: 219, 31
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
+TRClickX
+  rotate: false
+  xy: 231, 46
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 0
+TRClickX
+  rotate: false
+  xy: 231, 31
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 1
+TRClickX
+  rotate: false
+  xy: 243, 46
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: 2
 o1
   rotate: false
-  xy: 51, 52
+  xy: 104, 6
   size: 7, 8
   orig: 7, 8
   offset: 0, 0
   index: 0
 o1
   rotate: false
-  xy: 25, 12
+  xy: 113, 6
   size: 7, 8
   orig: 7, 8
   offset: 0, 0
   index: 1
 o1
   rotate: false
-  xy: 39, 28
+  xy: 122, 6
   size: 7, 8
   orig: 7, 8
   offset: 0, 0
   index: 2
 x1
   rotate: false
-  xy: 34, 12
+  xy: 131, 6
   size: 7, 8
   orig: 7, 8
   offset: 0, 0
   index: 0
 x1
   rotate: false
-  xy: 25, 2
+  xy: 140, 6
   size: 7, 8
   orig: 7, 8
   offset: 0, 0
   index: 1
 x1
   rotate: false
-  xy: 34, 2
+  xy: 149, 6
   size: 7, 8
   orig: 7, 8
   offset: 0, 0

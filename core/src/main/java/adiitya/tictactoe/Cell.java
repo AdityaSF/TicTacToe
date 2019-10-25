@@ -1,61 +1,91 @@
 package adiitya.tictactoe;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
+import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Rectangle;
-import com.badlogic.gdx.math.Vector2;
 
+import java.util.Objects;
 import java.util.Optional;
 
 public class Cell {
 
-	private boolean clicked = false;
-
 	private float x;
 	private float y;
-	private CellType type;
+	private CellType cellType;
 
-	private PlayerObject player = null;
+	private float clickElapsed = 0F;
+	private boolean clicked = false;
+	private Animation<AtlasRegion> clickAnimation = null;
 
-	public Cell(float x, float y, CellType type) {
+	private float winElapsed = 0F;
+	private Animation<AtlasRegion> winAnimation = null;
 
+	private PlayerType playerType;
+
+	public Cell(float x, float y, CellType cellType) {
+		this(x, y, cellType, PlayerType.NONE);
+	}
+
+	public Cell(float x, float y, CellType cellType, PlayerType playerType) {
 		this.x = x;
 		this.y = y;
-		this.type = type;
+		this.cellType = Objects.requireNonNull(cellType);
+		this.playerType = Optional.ofNullable(playerType).orElse(PlayerType.NONE);
 	}
 
 	public void render(SpriteBatch batch) {
-
-		render(batch, x, y, type);
+		render(batch, x, y, cellType);
 	}
 
 	public void render(SpriteBatch batch, float x, float y, CellType type) {
 
-		AtlasRegion texture = Resources.getTexture(type.textureName);
-		batch.draw(texture, x, y, texture.getRegionWidth() * TicTacToe.SCALE, texture.getRegionHeight() * TicTacToe.SCALE);
+		AtlasRegion emptyTexture = Resources.getTexture(type.getEmptyTextureName());
+		batch.draw(emptyTexture, x, y, emptyTexture.getRegionWidth() * TicTacToe.SCALE, emptyTexture.getRegionHeight() * TicTacToe.SCALE);
+
 		renderPlayer(batch);
 	}
 
 	private void renderPlayer(SpriteBatch batch) {
 
-		if (player == null)
-			return;
+		if (clickAnimation != null) {
 
-		AtlasRegion cell = Resources.getTexture(type.textureName);
-		Vector2 playerOff = new Vector2(TicTacToe.SCALE * (cell.getRegionWidth() - player.getTextureWidth()) / 2F, TicTacToe.SCALE * (cell.getRegionHeight() - player.getTextureHeight()) / 2F);
+			clickElapsed = MathUtils.clamp(clickElapsed + Gdx.graphics.getDeltaTime(), 0, clickAnimation.getAnimationDuration());
+			RenderUtils.renderAnimation(batch, clickAnimation, clickElapsed, x, y);
+		}
 
-		player.render(batch, x + playerOff.x, y + playerOff.y);
+		if (winAnimation != null) {
+
+			winElapsed = MathUtils.clamp(winElapsed + Gdx.graphics.getDeltaTime(), 0, winAnimation.getAnimationDuration());
+			RenderUtils.renderAnimation(batch, winAnimation, winElapsed, x, y);
+		}
+	}
+
+	public void setPlayerType(PlayerType playerType) {
+		this.playerType = Optional.ofNullable(playerType).orElse(PlayerType.NONE);
+	}
+
+	public void win() {
+		winAnimation = new Animation<>(0.1F, Resources.getAnimation(cellType.getWinAnimationName(playerType)));
+	}
+
+	private void click() {
+
+		clicked = true;
+		clickAnimation = new Animation<>(0.1F, Resources.getAnimation(cellType.getClickAnimationName(playerType)));
 	}
 
 	public boolean onClick(int x, int y, PlayerType playerType) {
 
-		AtlasRegion texture = Resources.getTexture(type.textureName);
+		AtlasRegion texture = Resources.getTexture(cellType.getEmptyTextureName());
 		Rectangle bounds = new Rectangle(this.x, this.y, texture.getRegionWidth() * TicTacToe.SCALE, texture.getRegionHeight() * TicTacToe.SCALE);
 
 		if (bounds.contains(x, y) && !clicked) {
 
-			player = PlayerObject.fromPlayerType(playerType);
-			clicked = true;
+			setPlayerType(playerType);
+			click();
 
 			return true;
 		}
@@ -64,23 +94,8 @@ public class Cell {
 	}
 
 	public PlayerType getOccupation() {
-		return Optional.ofNullable(player)
-				.map(PlayerObject::getType)
+		return Optional.ofNullable(playerType)
 				.orElse(PlayerType.NONE);
 	}
 
-	public enum CellType {
-
-		CORNER("cell_corner"),
-		SIDE("cell_side"),
-		TOP("cell_top"),
-		CENTER("cell_center");
-
-		private String textureName;
-
-		CellType(String textureName) {
-
-			this.textureName = textureName;
-		}
-	}
 }

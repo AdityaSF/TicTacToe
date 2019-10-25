@@ -2,7 +2,7 @@ package adiitya.tictactoe.screens;
 
 import adiitya.tictactoe.TicTacToe;
 import adiitya.tictactoe.Cell;
-import adiitya.tictactoe.Cell.CellType;
+import adiitya.tictactoe.CellType;
 import adiitya.tictactoe.PlayerType;
 import adiitya.tictactoe.Resources;
 import adiitya.tictactoe.score.ScoreManager;
@@ -31,18 +31,18 @@ public class PlayScreen implements Screen, InputProcessor {
 	@Override
 	public void show() {
 
-		dividers = Resources.getTexture("board_dividers");
+		dividers = Resources.getTexture("Dividers");
 
 		cells = new Array<>();
-		cells.add(new Cell(117, 109, CellType.CORNER));
-		cells.add(new Cell(211, 109, CellType.TOP));
-		cells.add(new Cell(297, 109, CellType.CORNER));
-		cells.add(new Cell(117, 211, CellType.SIDE));
-		cells.add(new Cell(211, 211, CellType.CENTER));
-		cells.add(new Cell(297, 211, CellType.SIDE));
-		cells.add(new Cell(117, 305, CellType.CORNER));
-		cells.add(new Cell(211, 305, CellType.TOP));
-		cells.add(new Cell(297, 305, CellType.CORNER));
+		cells.add(new Cell(117, 93, CellType.TOP_LEFT));
+		cells.add(new Cell(211, 93, CellType.TOP));
+		cells.add(new Cell(297, 93, CellType.TOP_RIGHT));
+		cells.add(new Cell(117, 188, CellType.LEFT));
+		cells.add(new Cell(211, 188, CellType.CENTER));
+		cells.add(new Cell(297, 188, CellType.RIGHT));
+		cells.add(new Cell(117, 289, CellType.BOTTOM_LEFT));
+		cells.add(new Cell(211, 289, CellType.BOTTOM));
+		cells.add(new Cell(297, 289, CellType.BOTTOM_RIGHT));
 
 		playerType = PlayerType.X;
 		manager = new ScoreManager();
