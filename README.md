@@ -19,14 +19,6 @@ To build the desktop jar, run this command:
 > mvn package -P desktop
 ```
 
-## TODO
-
-* Multiplayer
-* Unbeatable AI
-* Choosing X or O
-* Restart game
-* Score counter
-
 ## Credits
 * [Stuxi (iStuxi)](https://github.com/iStuxi) - Textures
 * [Adiitya (AdityaSF)](https://github.com/AdityaSF) - Programming
